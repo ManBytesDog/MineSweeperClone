@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(emptyArray)
     const gameArray = emptyArray.concat(bombArray)
     console.log(gameArray)
+    const randomArray = gameArray.sort(() => Math.random() -0.5)
+    console.log(randomArray)
 
     for(let i = 0; i < width * width; i++) {
       const square = document.createElement('div')
