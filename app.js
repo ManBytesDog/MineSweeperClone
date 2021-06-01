@@ -20,6 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
       grid.appendChild(square)
       squares.push(square)
     }
+
+
+    for (let i = 0; i < squares.length; i++) {
+      const isLeftSide = (i % width === 0)
+      const isRightSide = (i % width === width -1)
+
+      
+    }
+
+
+
+
+
   }
 
   createBoard()
