@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
       square.classList.add(randomArray[i])
       grid.appendChild(square)
       squares.push(square)
+
+      square.addEventListener('click', function(event) {
+        click(square)
+      })
     }
 
 
@@ -37,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i < 88 && !isRightSide && squares[i +1 +width].classList.contains('bomb')) total ++
         if (i < 89 && squares[i +width].classList.contains('bomb')) total ++
         squares[i].setAttribute('data', total)
-        console.log(squares[i])
       }
     }
 
@@ -48,6 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   createBoard()
+
+  function click(square) {
+    if (square.classList.contains('bomb')) {
+      console.log('Game Over!')
+    }
+  }
 
 
 })
