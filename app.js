@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (squares[i].classList.contains('valid')) {
         if (i > 0 && !isLeftSide && squares[i -1].classList.contains('bomb')) total ++
         if (i > 9 && !isRightSide && squares[i +1 -width].classList.contains('bomb')) total ++
+        if (i > 10 && squares[i -width].classList.contains('bomb')) total ++
+        if (i > 11 && !isLeftSide && squares[i -1 -width].classList.contains('bomb')) total ++
+        if (i < 98 && !isRightSide && squares[i +1].classList.contains('bomb')) total ++
+        if (i < 90 && !isLeftSide && squares[i -1 +width].classList.contains('bomb')) total ++
+        if (i < 88 && !isRightSide && squares[i +1 +width].classList.contains('bomb')) total ++
+        if (i < 89 && squares[i +width].classList.contains('bomb')) total ++
         squares[i].setAttribute('data', total)
         console.log(squares[i])
       }
