@@ -55,6 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
   function click(square) {
     if (square.classList.contains('bomb')) {
       console.log('Game Over!')
+    } else {
+      let total = square.getAttribute('data')
+      if (total !=0) {
+        square.classList.add('checked')
+      }
     }
   }
 
