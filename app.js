@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       if (currentId > 0 && !isLeftSide) {
         const newId = squares[parseInt(currentId) -1].id
-        const newSquare = getElementById(newId)
+        const newSquare = document.getElementById(newId)
         click(newSquare)
       }
       if (currentId > 9 && !isRightSide) {
@@ -97,8 +97,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const newSquare = document.getElementById(newId)
         click(newSquare)
       }
-
-
+      if (currentId < 90 && !isLeftSide) {
+        const newId = squares[parseInt(currentId) -1 +width].id
+        const newSquare = document.getElementById(newId)
+        click(newSquare)
+      }
+      if (currentId < 88 && !isRightSide) {
+        const newId = squares[parseInt(currentId) +1 +width].id
+        const newSquare = document.getElementById(newId)
+        click(newSquare)
+      }
+      if (currentId < 89) {
+        const newId = squares[parseInt(currentId) +width].id
+        const newSquare = document.getElementById(newId)
+        click(newSquare)
+      }
     }, 10)
   }
 
