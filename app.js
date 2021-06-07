@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const newSquare = document.getElementById(newId)
         click(newSquare)
       }
-      if (currentId < 98 && !isRightSide) {
+      if (currentId < 99 && !isRightSide) {
         const newId = squares[parseInt(currentId) +1].id
         const newSquare = document.getElementById(newId)
         click(newSquare)
