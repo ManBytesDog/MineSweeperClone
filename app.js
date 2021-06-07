@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         square.classList.add('flag')
         square.innerHTML = '🖕'
         flags ++
+        checkForWin()
       } else {
         square.classList.remove('flag')
         square.innerHTML = ''
@@ -148,6 +149,20 @@ function gameOver(square) {
       square.innerHTML = '💣'
     }
   })
+}
+
+function checkForWin() {
+let matches = 0
+
+  for (let i = 0; i < squares.length; i++) {
+    if (squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
+      matches ++
+    }
+    if (matches === bombCount) {
+      console.log('You Win! No Boom and Go Bye Bye!')
+      isGameOver = true 
+    }
+  }
 }
 
 
