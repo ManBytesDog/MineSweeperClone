@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!square.classList.contains('checked') && (flags < bombCount)) {
       if (!square.classList.contains('flag')) {
         square.classList.add('flag')
-        square.innerHTML = '🖕'
+        square.innerHTML = '🚩'
         flags ++
         checkForWin()
       } else {
