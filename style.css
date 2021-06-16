@@ -1,3 +1,8 @@
+.header {
+  color: rgb(135, 172, 202);
+  text-align: center;
+}
+
 .grid {
   height: 400px;
   width: 400px;
