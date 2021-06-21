@@ -3,11 +3,12 @@
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-size: 45px;
+  
 }
 
 .grid {
-  height: 400px;
-  width: 400px;
+  height: 420px;
+  width: 420px;
   display: flex;
   flex-wrap: wrap;
   background-color: gray;
@@ -17,6 +18,8 @@
 .grid div {
   height: 40px;
   width: 40px;
+  display: flex;
+  border: 1px solid black;
 }
 
 .checked {
