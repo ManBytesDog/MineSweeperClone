@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   background-color: gray;
   border: 1px solid black;
+  margin: auto;
 }
 
 .grid div {
@@ -20,6 +21,7 @@
   width: 40px;
   display: flex;
   border: 1px solid black;
+  
 }
 
 .checked {
